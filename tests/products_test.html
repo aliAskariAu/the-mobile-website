@@ -1,0 +1,1582 @@
+<div class="container-fluid p-4">
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-12">
+      <!-- Page header -->
+      <div
+        class="border-bottom pb-4 mb-4 d-lg-flex align-items-center justify-content-between"
+      >
+        <div class="mb-2 mb-lg-0">
+          <h1 class="mb-0 h2 fw-bold">Products</h1>
+          <!-- Breadcrumb -->
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="admin-dashboard.html">Dashboard</a>
+              </li>
+              <li class="breadcrumb-item">
+                <a href="#">Ecommerce </a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                Products
+              </li>
+            </ol>
+          </nav>
+        </div>
+        <!-- button -->
+        <div>
+          <a href="#" class="me-5 text-body"
+            ><i class="fe fe-upload me-2"></i>Export</a
+          >
+          <a href="#" class="me-5 text-body"
+            ><i class="fe fe-download me-2"></i>Import</a
+          >
+          <a href="add-product.html" class="btn btn-primary me-2"
+            >Add Product</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-12">
+      <!-- Card -->
+      <div class="card rounded-3">
+        <!-- Card Header -->
+        <div class="card-header border-bottom-0 p-0">
+          <ul class="nav nav-lb-tab" id="tab" role="tablist">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                id="all-tab"
+                data-bs-toggle="pill"
+                href="#all"
+                role="tab"
+                aria-controls="all"
+                aria-selected="true"
+                >All</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                id="active-tab"
+                data-bs-toggle="pill"
+                href="#active"
+                role="tab"
+                aria-controls="active"
+                aria-selected="false"
+                >Active</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                id="draft-tab"
+                data-bs-toggle="pill"
+                href="#draft"
+                role="tab"
+                aria-controls="draft"
+                aria-selected="false"
+                >Draft</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                id="archived-tab"
+                data-bs-toggle="pill"
+                href="#archived"
+                role="tab"
+                aria-controls="archived"
+                aria-selected="false"
+                >Archived</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="p-4 row">
+          <!-- Form -->
+          <form class="d-flex align-items-center col-12 col-md-8 col-lg-3">
+            <span class="position-absolute ps-3 search-icon">
+              <i class="fe fe-search"></i>
+            </span>
+            <input
+              type="search"
+              class="form-control ps-6"
+              placeholder="Filter Products"
+            />
+          </form>
+        </div>
+        <div>
+          <div class="tab-content" id="tabContent">
+            <!-- Tab -->
+            <div
+              class="tab-pane fade show active"
+              id="all"
+              role="tabpanel"
+              aria-labelledby="all-tab"
+            >
+              <div class="table-responsive border-0">
+                <!-- Table -->
+                <table class="table mb-0 text-nowrap">
+                  <!-- Table Head -->
+                  <thead class="table-light">
+                    <tr>
+                      <th class="border-0 font-size-inherit w-0">
+                        <div class="form-check">
+                          <input
+                            type="checkbox"
+                            class="form-check-input"
+                            id="checkAll"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="checkAll"
+                          ></label>
+                        </div>
+                      </th>
+                      <th class="border-0">Products</th>
+                      <th class="border-0">Status</th>
+                      <th class="border-0">Inventory</th>
+                      <th class="border-0">Category</th>
+                      <th class="border-0">Price</th>
+                      <th class="border-0"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- Table body -->
+                    <tr>
+                      <td class="align-middle border-top-0">
+                        <div class="form-check">
+                          <input
+                            type="checkbox"
+                            class="form-check-input"
+                            id="productOne"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="productOne"
+                          ></label>
+                        </div>
+                      </td>
+                      <td class="align-middle border-top-0">
+                        <a href="#" class="text-inherit">
+                          <div class="d-lg-flex align-items-center">
+                            <div>
+                              <img
+                                src="../../../assets/images/ecommerce/ecommerce-img-1.jpg"
+                                alt=""
+                                class="img-4by3-md rounded"
+                              />
+                            </div>
+                            <div class="ms-lg-3 mt-2 mt-lg-0">
+                              <h5 class="mb-0 text-primary-hover">
+                                White &amp; Red Nike Athletic Shoe
+                              </h5>
+                            </div>
+                          </div>
+                        </a>
+                      </td>
+                      <td class="align-middle border-top-0 text-success">
+                        <span class="badge bg-success badge-dot me-1"></span
+                        >Active
+                      </td>
+                      <td class="align-middle border-top-0">5</td>
+                      <td class="align-middle border-top-0">Shoe</td>
+                      <td class="align-middle border-top-0">$49.00</td>
+
+                      <td class="text-muted align-middle border-top-0 text-end">
+                        <span class="dropdown dropstart">
+                          <a
+                            class="btn-icon btn btn-ghost btn-sm rounded-circle"
+                            href="#"
+                            role="button"
+                            id="productDropdown1"
+                            data-bs-toggle="dropdown"
+                            data-bs-offset="-20,20"
+                            aria-expanded="false"
+                          >
+                            <i class="fe fe-more-vertical"></i>
+                          </a>
+                          <span
+                            class="dropdown-menu"
+                            aria-labelledby="productDropdown1"
+                          >
+                            <span class="dropdown-header">Settings</span>
+                            <a class="dropdown-item" href="#"
+                              ><i class="fe fe-edit dropdown-item-icon"></i
+                              >Edit</a
+                            >
+                            <a class="dropdown-item" href="#"
+                              ><i class="fe fe-mail dropdown-item-icon"></i
+                              >Invite</a
+                            >
+
+                            <a class="dropdown-item" href="#"
+                              ><i class="fe fe-trash dropdown-item-icon"></i
+                              >Delete</a
+                            >
+                          </span>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="align-middle border-top-0">
+                        <div class="form-check">
+                          <input
+                            type="checkbox"
+                            class="form-check-input"
+                            id="productTwo"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="productTwo"
+                          ></label>
+                        </div>
+                      </td>
+                      <td class="align-middle border-top-0">
+                        <a href="#" class="text-inherit">
+                          <div class="d-lg-flex align-items-center">
+                            <div>
+                              <img
+                                src="../../../assets/images/ecommerce/ecommerce-img-2.jpg"
+                                alt=""
+                                class="img-4by3-md rounded"
+                              />
+                            </div>
+                            <div class="ms-lg-3 mt-2 mt-lg-0">
+                              <h5 class="mb-0 text-primary-hover">
+                                White Adidas Low-top Sneakers
+                              </h5>
+                            </div>
+                          </div>
+                        </a>
+                      </td>
+                      <td class="align-middle border-top-0 text-success">
+                        <span class="badge bg-success badge-dot me-1"></span
+                        >Active
+                      </td>
+                      <td class="align-middle border-top-0">3</td>
+                      <td class="align-middle border-top-0">Shoe</td>
+                      <td class="align-middle border-top-0">$149.00</td>
+
+                      <td class="text-muted align-middle border-top-0 text-end">
+                        <span class="dropdown dropstart">
+                          <a
+                            class="btn-icon btn btn-ghost btn-sm rounded-circle"
+                            href="#"
+                            role="button"
+                            id="productDropdown2"
+                            data-bs-toggle="dropdown"
+                            data-bs-offset="-20,20"
+                            aria-expanded="false"
+                          >
+                            <i class="fe fe-more-vertical"></i>
+                          </a>
+                          <span
+                            class="dropdown-menu"
+                            aria-labelledby="productDropdown2"
+                          >
+                            <span class="dropdown-header">Settings</span>
+                            <a class="dropdown-item" href="#"
+                              ><i class="fe fe-edit dropdown-item-icon"></i
+                              >Edit</a
+                            >
+                            <a class="dropdown-item" href="#"
+                              ><i class="fe fe-mail dropdown-item-icon"></i
+                              >Invite</a
+                            >
+
+                            <a class="dropdown-item" href="#"
+                              ><i class="fe fe-trash dropdown-item-icon"></i
+                              >Delete</a
+                            >
+                          </span>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="align-middle border-top-0">
+                        <div class="form-check">
+                          <input
+                            type="checkbox"
+                            class="form-check-input"
+                            id="productThree"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="productThree"
+                          ></label>
+                        </div>
+                      </td>
+                      <td class="align-middle border-top-0">
+                        <a href="#" class="text-inherit">
+                          <div class="d-lg-flex align-items-center">
+                            <div>
+                              <img
+                                src="../../../assets/images/ecommerce/ecommerce-img-3.jpg"
+                                alt=""
+                                class="img-4by3-md rounded"
+                              />
+                            </div>
+                            <div class="ms-lg-3 mt-2 mt-lg-0">
+                              <h5 class="mb-0 text-primary-hover">
+                                Black &amp; White Nike Athletic Shoe
+                              </h5>
+                            </div>
+                          </div>
+                        </a>
+                      </td>
+                      <td class="align-middle border-top-0 text-success">
+                        <span class="badge bg-success badge-dot me-1"></span
+                        >Active
+                      </td>
+                      <td class="align-middle border-top-0">2</td>
+                      <td class="align-middle border-top-0">Shoe</td>
+                      <td class="align-middle border-top-0">$249.00</td>
+
+                      <td class="text-muted align-middle border-top-0 text-end">
+                        <span class="dropdown dropstart">
+                          <a
+                            class="btn-icon btn btn-ghost btn-sm rounded-circle"
+                            href="#"
+                            role="button"
+                            id="productDropdown3"
+                            data-bs-toggle="dropdown"
+                            data-bs-offset="-20,20"
+                            aria-expanded="false"
+                          >
+                            <i class="fe fe-more-vertical"></i>
+                          </a>
+                          <span
+                            class="dropdown-menu"
+                            aria-labelledby="productDropdown3"
+                          >
+                            <span class="dropdown-header">Settings</span>
+                            <a class="dropdown-item" href="#"
+                              ><i class="fe fe-edit dropdown-item-icon"></i
+                              >Edit</a
+                            >
+                            <a class="dropdown-item" href="#"
+                              ><i class="fe fe-mail dropdown-item-icon"></i
+                              >Invite</a
+                            >
+
+                            <a class="dropdown-item" href="#"
+                              ><i class="fe fe-trash dropdown-item-icon"></i
+                              >Delete</a
+                            >
+                          </span>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="align-middle border-top-0">
+                        <div class="form-check">
+                          <input
+                            type="checkbox"
+                            class="form-check-input"
+                            id="productFour"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="productFour"
+                          ></label>
+                        </div>
+                      </td>
+                      <td class="align-middle border-top-0">
+                        <a href="#" class="text-inherit">
+                          <div class="d-lg-flex align-items-center">
+                            <div>
+                              <img
+                                src="../../../assets/images/ecommerce/ecommerce-img-4.jpg"
+                                alt=""
+                                class="img-4by3-md rounded"
+                              />
+                            </div>
+                            <div class="ms-lg-3 mt-2 mt-lg-0">
+                              <h5 class="mb-0 text-primary-hover">
+                                Wayfarer Styled Sunglasses
+                              </h5>
+                            </div>
+                          </div>
+                        </a>
+                      </td>
+                      <td class="align-middle border-top-0 text-warning">
+                        <span class="badge bg-warning badge-dot me-1"></span
+                        >Draft
+                      </td>
+                      <td class="align-middle border-top-0">6</td>
+                      <td class="align-middle border-top-0">Glasses</td>
+                      <td class="align-middle border-top-0">$39.00</td>
+
+                      <td class="text-muted align-middle border-top-0 text-end">
+                        <span class="dropdown dropstart">
+                          <a
+                            class="btn-icon btn btn-ghost btn-sm rounded-circle"
+                            href="#"
+                            role="button"
+                            id="productDropdown4"
+                            data-bs-toggle="dropdown"
+                            data-bs-offset="-20,20"
+                            aria-expanded="false"
+                          >
+                            <i class="fe fe-more-vertical"></i>
+                          </a>
+                          <span
+                            class="dropdown-menu"
+                            aria-labelledby="productDropdown4"
+                          >
+                            <span class="dropdown-header">Settings</span>
+                            <a class="dropdown-item" href="#"
+                              ><i class="fe fe-edit dropdown-item-icon"></i
+                              >Edit</a
+                            >
+                            <a class="dropdown-item" href="#"
+                              ><i class="fe fe-mail dropdown-item-icon"></i
+                              >Invite</a
+                            >
+
+                            <a class="dropdown-item" href="#"
+                              ><i class="fe fe-trash dropdown-item-icon"></i
+                              >Delete</a
+                            >
+                          </span>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="align-middle border-top-0">
+                        <div class="form-check">
+                          <input
+                            type="checkbox"
+                            class="form-check-input"
+                            id="productFive"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="productFive"
+                          ></label>
+                        </div>
+                      </td>
+                      <td class="align-middle border-top-0">
+                        <a href="#" class="text-inherit">
+                          <div class="d-lg-flex align-items-center">
+                            <div>
+                              <img
+                                src="../../../assets/images/ecommerce/ecommerce-img-5.jpg"
+                                alt=""
+                                class="img-4by3-md rounded"
+                              />
+                            </div>
+                            <div class="ms-lg-3 mt-2 mt-lg-0">
+                              <h5 class="mb-0 text-primary-hover">
+                                Black Framed Sunglasses
+                              </h5>
+                            </div>
+                          </div>
+                        </a>
+                      </td>
+                      <td class="align-middle border-top-0 text-success">
+                        <span class="badge bg-success badge-dot me-1"></span
+                        >Active
+                      </td>
+                      <td class="align-middle border-top-0">4</td>
+                      <td class="align-middle border-top-0">Glasses</td>
+                      <td class="align-middle border-top-0">$69.00</td>
+
+                      <td class="text-muted align-middle border-top-0 text-end">
+                        <span class="dropdown dropstart">
+                          <a
+                            class="btn-icon btn btn-ghost btn-sm rounded-circle"
+                            href="#"
+                            role="button"
+                            id="productDropdown5"
+                            data-bs-toggle="dropdown"
+                            data-bs-offset="-20,20"
+                            aria-expanded="false"
+                          >
+                            <i class="fe fe-more-vertical"></i>
+                          </a>
+                          <span
+                            class="dropdown-menu"
+                            aria-labelledby="productDropdown5"
+                          >
+                            <span class="dropdown-header">Settings</span>
+                            <a class="dropdown-item" href="#"
+                              ><i class="fe fe-edit dropdown-item-icon"></i
+                              >Edit</a
+                            >
+                            <a class="dropdown-item" href="#"
+                              ><i class="fe fe-mail dropdown-item-icon"></i
+                              >Invite</a
+                            >
+
+                            <a class="dropdown-item" href="#"
+                              ><i class="fe fe-trash dropdown-item-icon"></i
+                              >Delete</a
+                            >
+                          </span>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="align-middle border-top-0">
+                        <div class="form-check">
+                          <input
+                            type="checkbox"
+                            class="form-check-input"
+                            id="productSix"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="productSix"
+                          ></label>
+                        </div>
+                      </td>
+                      <td class="align-middle border-top-0">
+                        <a href="#" class="text-inherit">
+                          <div class="d-lg-flex align-items-center">
+                            <div>
+                              <img
+                                src="../../../assets/images/ecommerce/ecommerce-img-6.jpg"
+                                alt=""
+                                class="img-4by3-md rounded"
+                              />
+                            </div>
+                            <div class="ms-lg-3 mt-2 mt-lg-0">
+                              <h5 class="mb-0 text-primary-hover">
+                                Brown Leather Handbag
+                              </h5>
+                            </div>
+                          </div>
+                        </a>
+                      </td>
+                      <td class="align-middle border-top-0 text-success">
+                        <span class="badge bg-success badge-dot me-1"></span
+                        >Active
+                      </td>
+                      <td class="align-middle border-top-0">8</td>
+                      <td class="align-middle border-top-0">Bag</td>
+                      <td class="align-middle border-top-0">$89.00</td>
+
+                      <td class="text-muted align-middle border-top-0 text-end">
+                        <span class="dropdown dropstart">
+                          <a
+                            class="btn-icon btn btn-ghost btn-sm rounded-circle"
+                            href="#"
+                            role="button"
+                            id="productDropdown6"
+                            data-bs-toggle="dropdown"
+                            data-bs-offset="-20,20"
+                            aria-expanded="false"
+                          >
+                            <i class="fe fe-more-vertical"></i>
+                          </a>
+                          <span
+                            class="dropdown-menu"
+                            aria-labelledby="productDropdown6"
+                          >
+                            <span class="dropdown-header">Settings</span>
+                            <a class="dropdown-item" href="#"
+                              ><i class="fe fe-edit dropdown-item-icon"></i
+                              >Edit</a
+                            >
+                            <a class="dropdown-item" href="#"
+                              ><i class="fe fe-mail dropdown-item-icon"></i
+                              >Invite</a
+                            >
+
+                            <a class="dropdown-item" href="#"
+                              ><i class="fe fe-trash dropdown-item-icon"></i
+                              >Delete</a
+                            >
+                          </span>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="align-middle border-top-0">
+                        <div class="form-check">
+                          <input
+                            type="checkbox"
+                            class="form-check-input"
+                            id="productSeven"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="productSeven"
+                          ></label>
+                        </div>
+                      </td>
+                      <td class="align-middle border-top-0">
+                        <a href="#" class="text-inherit">
+                          <div class="d-lg-flex align-items-center">
+                            <div>
+                              <img
+                                src="../../../assets/images/ecommerce/ecommerce-img-7.jpg"
+                                alt=""
+                                class="img-4by3-md rounded"
+                              />
+                            </div>
+                            <div class="ms-lg-3 mt-2 mt-lg-0">
+                              <h5 class="mb-0 text-primary-hover">
+                                Brown Leather Sling Bag
+                              </h5>
+                            </div>
+                          </div>
+                        </a>
+                      </td>
+                      <td class="align-middle border-top-0 text-success">
+                        <span class="badge bg-success badge-dot me-1"></span
+                        >Active
+                      </td>
+                      <td class="align-middle border-top-0">1</td>
+                      <td class="align-middle border-top-0">Bag</td>
+                      <td class="align-middle border-top-0">$299.00</td>
+
+                      <td class="text-muted align-middle border-top-0 text-end">
+                        <span class="dropdown dropstart">
+                          <a
+                            class="btn-icon btn btn-ghost btn-sm rounded-circle"
+                            href="#"
+                            role="button"
+                            id="productDropdown7"
+                            data-bs-toggle="dropdown"
+                            data-bs-offset="-20,20"
+                            aria-expanded="false"
+                          >
+                            <i class="fe fe-more-vertical"></i>
+                          </a>
+                          <span
+                            class="dropdown-menu"
+                            aria-labelledby="productDropdown7"
+                          >
+                            <span class="dropdown-header">Settings</span>
+                            <a class="dropdown-item" href="#"
+                              ><i class="fe fe-edit dropdown-item-icon"></i
+                              >Edit</a
+                            >
+                            <a class="dropdown-item" href="#"
+                              ><i class="fe fe-mail dropdown-item-icon"></i
+                              >Invite</a
+                            >
+
+                            <a class="dropdown-item" href="#"
+                              ><i class="fe fe-trash dropdown-item-icon"></i
+                              >Delete</a
+                            >
+                          </span>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="align-middle border-top-0">
+                        <div class="form-check">
+                          <input
+                            type="checkbox"
+                            class="form-check-input"
+                            id="productEight"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="productEight"
+                          ></label>
+                        </div>
+                      </td>
+                      <td class="align-middle border-top-0">
+                        <a href="#" class="text-inherit">
+                          <div class="d-lg-flex align-items-center">
+                            <div>
+                              <img
+                                src="../../../assets/images/ecommerce/ecommerce-img-8.jpg"
+                                alt=""
+                                class="img-4by3-md rounded"
+                              />
+                            </div>
+                            <div class="ms-lg-3 mt-2 mt-lg-0">
+                              <h5 class="mb-0 text-primary-hover">
+                                Green &amp; Black Nike Athletic Shoe
+                              </h5>
+                            </div>
+                          </div>
+                        </a>
+                      </td>
+                      <td class="align-middle border-top-0 text-info">
+                        <span class="badge bg-info badge-dot me-1"></span
+                        >Archived
+                      </td>
+                      <td class="align-middle border-top-0">2</td>
+                      <td class="align-middle border-top-0">Shoe</td>
+                      <td class="align-middle border-top-0">$239.00</td>
+
+                      <td class="text-muted align-middle border-top-0 text-end">
+                        <span class="dropdown dropstart">
+                          <a
+                            class="btn-icon btn btn-ghost btn-sm rounded-circle"
+                            href="#"
+                            role="button"
+                            id="productDropdown8"
+                            data-bs-toggle="dropdown"
+                            data-bs-offset="-20,20"
+                            aria-expanded="false"
+                          >
+                            <i class="fe fe-more-vertical"></i>
+                          </a>
+                          <span
+                            class="dropdown-menu"
+                            aria-labelledby="productDropdown8"
+                          >
+                            <span class="dropdown-header">Settings</span>
+                            <a class="dropdown-item" href="#"
+                              ><i class="fe fe-edit dropdown-item-icon"></i
+                              >Edit</a
+                            >
+                            <a class="dropdown-item" href="#"
+                              ><i class="fe fe-mail dropdown-item-icon"></i
+                              >Invite</a
+                            >
+
+                            <a class="dropdown-item" href="#"
+                              ><i class="fe fe-trash dropdown-item-icon"></i
+                              >Delete</a
+                            >
+                          </span>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="align-middle border-top-0">
+                        <div class="form-check">
+                          <input
+                            type="checkbox"
+                            class="form-check-input"
+                            id="productNine"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="productNine"
+                          ></label>
+                        </div>
+                      </td>
+                      <td class="align-middle border-top-0">
+                        <a href="#" class="text-inherit">
+                          <div class="d-lg-flex align-items-center">
+                            <div>
+                              <img
+                                src="../../../assets/images/ecommerce/ecommerce-img-9.jpg"
+                                alt=""
+                                class="img-4by3-md rounded"
+                              />
+                            </div>
+                            <div class="ms-lg-3 mt-2 mt-lg-0">
+                              <h5 class="mb-0 text-primary-hover">
+                                Pair Of Brown Sneakers
+                              </h5>
+                            </div>
+                          </div>
+                        </a>
+                      </td>
+                      <td class="align-middle border-top-0 text-success">
+                        <span class="badge bg-success badge-dot me-1"></span
+                        >Active
+                      </td>
+                      <td class="align-middle border-top-0">1</td>
+                      <td class="align-middle border-top-0">Shoe</td>
+                      <td class="align-middle border-top-0">$399.00</td>
+
+                      <td class="text-muted align-middle border-top-0 text-end">
+                        <span class="dropdown dropstart">
+                          <a
+                            class="btn-icon btn btn-ghost btn-sm rounded-circle"
+                            href="#"
+                            role="button"
+                            id="productDropdown9"
+                            data-bs-toggle="dropdown"
+                            data-bs-offset="-20,20"
+                            aria-expanded="false"
+                          >
+                            <i class="fe fe-more-vertical"></i>
+                          </a>
+                          <span
+                            class="dropdown-menu"
+                            aria-labelledby="productDropdown9"
+                          >
+                            <span class="dropdown-header">Settings</span>
+                            <a class="dropdown-item" href="#"
+                              ><i class="fe fe-edit dropdown-item-icon"></i
+                              >Edit</a
+                            >
+                            <a class="dropdown-item" href="#"
+                              ><i class="fe fe-mail dropdown-item-icon"></i
+                              >Invite</a
+                            >
+
+                            <a class="dropdown-item" href="#"
+                              ><i class="fe fe-trash dropdown-item-icon"></i
+                              >Delete</a
+                            >
+                          </span>
+                        </span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="active"
+              role="tabpanel"
+              aria-labelledby="active-tab"
+            >
+              <div class="table-responsive border-0">
+                <!-- Table -->
+                <table class="table mb-0 text-nowrap">
+                  <!-- Table Head -->
+                  <thead class="table-light">
+                    <tr>
+                      <th class="border-0 font-size-inherit w-0">
+                        <div class="form-check">
+                          <input
+                            type="checkbox"
+                            class="form-check-input"
+                            id="checkAll"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="checkAll"
+                          ></label>
+                        </div>
+                      </th>
+                      <th class="border-0">Products</th>
+                      <th class="border-0">Status</th>
+                      <th class="border-0">Inventory</th>
+                      <th class="border-0">Category</th>
+                      <th class="border-0">Price</th>
+
+                      <th class="border-0"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="align-middle border-top-0">
+                        <div class="form-check">
+                          <input
+                            type="checkbox"
+                            class="form-check-input"
+                            id="productten"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="productten"
+                          ></label>
+                        </div>
+                      </td>
+                      <td class="align-middle border-top-0">
+                        <a href="#" class="text-inherit">
+                          <div class="d-lg-flex align-items-center">
+                            <div>
+                              <img
+                                src="../../../assets/images/ecommerce/ecommerce-img-1.jpg"
+                                alt=""
+                                class="img-4by3-md rounded"
+                              />
+                            </div>
+                            <div class="ms-lg-3 mt-2 mt-lg-0">
+                              <h5 class="mb-0 text-primary-hover">
+                                White &amp; Red Nike Athletic Shoe
+                              </h5>
+                            </div>
+                          </div>
+                        </a>
+                      </td>
+                      <td class="align-middle border-top-0 text-success">
+                        <span class="badge bg-success badge-dot me-1"></span
+                        >Active
+                      </td>
+                      <td class="align-middle border-top-0">5</td>
+                      <td class="align-middle border-top-0">Shoe</td>
+                      <td class="align-middle border-top-0">$49.00</td>
+
+                      <td class="text-muted align-middle border-top-0 text-end">
+                        <span class="dropdown dropstart">
+                          <a
+                            class="btn-icon btn btn-ghost btn-sm rounded-circle"
+                            href="#"
+                            role="button"
+                            id="productDropdown10"
+                            data-bs-toggle="dropdown"
+                            data-bs-offset="-20,20"
+                            aria-expanded="false"
+                          >
+                            <i class="fe fe-more-vertical"></i>
+                          </a>
+                          <span
+                            class="dropdown-menu"
+                            aria-labelledby="productDropdown10"
+                          >
+                            <span class="dropdown-header">Settings</span>
+                            <a class="dropdown-item" href="#"
+                              ><i class="fe fe-edit dropdown-item-icon"></i
+                              >Edit</a
+                            >
+                            <a class="dropdown-item" href="#"
+                              ><i class="fe fe-mail dropdown-item-icon"></i
+                              >Invite</a
+                            >
+
+                            <a class="dropdown-item" href="#"
+                              ><i class="fe fe-trash dropdown-item-icon"></i
+                              >Delete</a
+                            >
+                          </span>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="align-middle border-top-0">
+                        <div class="form-check">
+                          <input
+                            type="checkbox"
+                            class="form-check-input"
+                            id="productEleven"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="productEleven"
+                          ></label>
+                        </div>
+                      </td>
+                      <td class="align-middle border-top-0">
+                        <a href="#" class="text-inherit">
+                          <div class="d-lg-flex align-items-center">
+                            <div>
+                              <img
+                                src="../../../assets/images/ecommerce/ecommerce-img-2.jpg"
+                                alt=""
+                                class="img-4by3-md rounded"
+                              />
+                            </div>
+                            <div class="ms-lg-3 mt-2 mt-lg-0">
+                              <h5 class="mb-0 text-primary-hover">
+                                White Adidas Low-top Sneakers
+                              </h5>
+                            </div>
+                          </div>
+                        </a>
+                      </td>
+                      <td class="align-middle border-top-0 text-success">
+                        <span class="badge bg-success badge-dot me-1"></span
+                        >Active
+                      </td>
+                      <td class="align-middle border-top-0">3</td>
+                      <td class="align-middle border-top-0">Shoe</td>
+                      <td class="align-middle border-top-0">$149.00</td>
+
+                      <td class="text-muted align-middle border-top-0 text-end">
+                        <span class="dropdown dropstart">
+                          <a
+                            class="btn-icon btn btn-ghost btn-sm rounded-circle"
+                            href="#"
+                            role="button"
+                            id="productDropdown11"
+                            data-bs-toggle="dropdown"
+                            data-bs-offset="-20,20"
+                            aria-expanded="false"
+                          >
+                            <i class="fe fe-more-vertical"></i>
+                          </a>
+                          <span
+                            class="dropdown-menu"
+                            aria-labelledby="productDropdown11"
+                          >
+                            <span class="dropdown-header">Settings</span>
+                            <a class="dropdown-item" href="#"
+                              ><i class="fe fe-edit dropdown-item-icon"></i
+                              >Edit</a
+                            >
+                            <a class="dropdown-item" href="#"
+                              ><i class="fe fe-mail dropdown-item-icon"></i
+                              >Invite</a
+                            >
+
+                            <a class="dropdown-item" href="#"
+                              ><i class="fe fe-trash dropdown-item-icon"></i
+                              >Delete</a
+                            >
+                          </span>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="align-middle border-top-0">
+                        <div class="form-check">
+                          <input
+                            type="checkbox"
+                            class="form-check-input"
+                            id="productThirteen"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="productThirteen"
+                          ></label>
+                        </div>
+                      </td>
+                      <td class="align-middle border-top-0">
+                        <a href="#" class="text-inherit">
+                          <div class="d-lg-flex align-items-center">
+                            <div>
+                              <img
+                                src="../../../assets/images/ecommerce/ecommerce-img-3.jpg"
+                                alt=""
+                                class="img-4by3-md rounded"
+                              />
+                            </div>
+                            <div class="ms-lg-3 mt-2 mt-lg-0">
+                              <h5 class="mb-0 text-primary-hover">
+                                Black &amp; White Nike Athletic Shoe
+                              </h5>
+                            </div>
+                          </div>
+                        </a>
+                      </td>
+                      <td class="align-middle border-top-0 text-success">
+                        <span class="badge bg-success badge-dot me-1"></span
+                        >Active
+                      </td>
+                      <td class="align-middle border-top-0">2</td>
+                      <td class="align-middle border-top-0">Shoe</td>
+                      <td class="align-middle border-top-0">$249.00</td>
+
+                      <td class="text-muted align-middle border-top-0 text-end">
+                        <span class="dropdown dropstart">
+                          <a
+                            class="btn-icon btn btn-ghost btn-sm rounded-circle"
+                            href="#"
+                            role="button"
+                            id="productDropdown13"
+                            data-bs-toggle="dropdown"
+                            data-bs-offset="-20,20"
+                            aria-expanded="false"
+                          >
+                            <i class="fe fe-more-vertical"></i>
+                          </a>
+                          <span
+                            class="dropdown-menu"
+                            aria-labelledby="productDropdown13"
+                          >
+                            <span class="dropdown-header">Settings</span>
+                            <a class="dropdown-item" href="#"
+                              ><i class="fe fe-edit dropdown-item-icon"></i
+                              >Edit</a
+                            >
+                            <a class="dropdown-item" href="#"
+                              ><i class="fe fe-mail dropdown-item-icon"></i
+                              >Invite</a
+                            >
+
+                            <a class="dropdown-item" href="#"
+                              ><i class="fe fe-trash dropdown-item-icon"></i
+                              >Delete</a
+                            >
+                          </span>
+                        </span>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td class="align-middle border-top-0">
+                        <div class="form-check">
+                          <input
+                            type="checkbox"
+                            class="form-check-input"
+                            id="productFourteen"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="productFourteen"
+                          ></label>
+                        </div>
+                      </td>
+                      <td class="align-middle border-top-0">
+                        <a href="#" class="text-inherit">
+                          <div class="d-lg-flex align-items-center">
+                            <div>
+                              <img
+                                src="../../../assets/images/ecommerce/ecommerce-img-5.jpg"
+                                alt=""
+                                class="img-4by3-md rounded"
+                              />
+                            </div>
+                            <div class="ms-lg-3 mt-2 mt-lg-0">
+                              <h5 class="mb-0 text-primary-hover">
+                                Black Framed Sunglasses
+                              </h5>
+                            </div>
+                          </div>
+                        </a>
+                      </td>
+                      <td class="align-middle border-top-0 text-success">
+                        <span class="badge bg-success badge-dot me-1"></span
+                        >Active
+                      </td>
+                      <td class="align-middle border-top-0">4</td>
+                      <td class="align-middle border-top-0">Glasses</td>
+                      <td class="align-middle border-top-0">$69.00</td>
+
+                      <td class="text-muted align-middle border-top-0 text-end">
+                        <span class="dropdown dropstart">
+                          <a
+                            class="btn-icon btn btn-ghost btn-sm rounded-circle"
+                            href="#"
+                            role="button"
+                            id="productDropdown41"
+                            data-bs-toggle="dropdown"
+                            data-bs-offset="-20,20"
+                            aria-expanded="false"
+                          >
+                            <i class="fe fe-more-vertical"></i>
+                          </a>
+                          <span
+                            class="dropdown-menu"
+                            aria-labelledby="productDropdown41"
+                          >
+                            <span class="dropdown-header">Settings</span>
+                            <a class="dropdown-item" href="#"
+                              ><i class="fe fe-edit dropdown-item-icon"></i
+                              >Edit</a
+                            >
+                            <a class="dropdown-item" href="#"
+                              ><i class="fe fe-mail dropdown-item-icon"></i
+                              >Invite</a
+                            >
+
+                            <a class="dropdown-item" href="#"
+                              ><i class="fe fe-trash dropdown-item-icon"></i
+                              >Delete</a
+                            >
+                          </span>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="align-middle border-top-0">
+                        <div class="form-check">
+                          <input
+                            type="checkbox"
+                            class="form-check-input"
+                            id="productFifteen"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="productFifteen"
+                          ></label>
+                        </div>
+                      </td>
+                      <td class="align-middle border-top-0">
+                        <a href="#" class="text-inherit">
+                          <div class="d-lg-flex align-items-center">
+                            <div>
+                              <img
+                                src="../../../assets/images/ecommerce/ecommerce-img-6.jpg"
+                                alt=""
+                                class="img-4by3-md rounded"
+                              />
+                            </div>
+                            <div class="ms-lg-3 mt-2 mt-lg-0">
+                              <h5 class="mb-0 text-primary-hover">
+                                Brown Leather Handbag
+                              </h5>
+                            </div>
+                          </div>
+                        </a>
+                      </td>
+                      <td class="align-middle border-top-0 text-success">
+                        <span class="badge bg-success badge-dot me-1"></span
+                        >Active
+                      </td>
+                      <td class="align-middle border-top-0">8</td>
+                      <td class="align-middle border-top-0">Bag</td>
+                      <td class="align-middle border-top-0">$89.00</td>
+
+                      <td class="text-muted align-middle border-top-0 text-end">
+                        <span class="dropdown dropstart">
+                          <a
+                            class="btn-icon btn btn-ghost btn-sm rounded-circle"
+                            href="#"
+                            role="button"
+                            id="productDropdown14"
+                            data-bs-toggle="dropdown"
+                            data-bs-offset="-20,20"
+                            aria-expanded="false"
+                          >
+                            <i class="fe fe-more-vertical"></i>
+                          </a>
+                          <span
+                            class="dropdown-menu"
+                            aria-labelledby="productDropdown14"
+                          >
+                            <span class="dropdown-header">Settings</span>
+                            <a class="dropdown-item" href="#"
+                              ><i class="fe fe-edit dropdown-item-icon"></i
+                              >Edit</a
+                            >
+                            <a class="dropdown-item" href="#"
+                              ><i class="fe fe-mail dropdown-item-icon"></i
+                              >Invite</a
+                            >
+
+                            <a class="dropdown-item" href="#"
+                              ><i class="fe fe-trash dropdown-item-icon"></i
+                              >Delete</a
+                            >
+                          </span>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="align-middle border-top-0">
+                        <div class="form-check">
+                          <input
+                            type="checkbox"
+                            class="form-check-input"
+                            id="productSixteen"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="productSixteen"
+                          ></label>
+                        </div>
+                      </td>
+                      <td class="align-middle border-top-0">
+                        <a href="#" class="text-inherit">
+                          <div class="d-lg-flex align-items-center">
+                            <div>
+                              <img
+                                src="../../../assets/images/ecommerce/ecommerce-img-7.jpg"
+                                alt=""
+                                class="img-4by3-md rounded"
+                              />
+                            </div>
+                            <div class="ms-lg-3 mt-2 mt-lg-0">
+                              <h5 class="mb-0 text-primary-hover">
+                                Brown Leather Sling Bag
+                              </h5>
+                            </div>
+                          </div>
+                        </a>
+                      </td>
+                      <td class="align-middle border-top-0 text-success">
+                        <span class="badge bg-success badge-dot me-1"></span
+                        >Active
+                      </td>
+                      <td class="align-middle border-top-0">1</td>
+                      <td class="align-middle border-top-0">Bag</td>
+                      <td class="align-middle border-top-0">$299.00</td>
+
+                      <td class="text-muted align-middle border-top-0 text-end">
+                        <span class="dropdown dropstart">
+                          <a
+                            class="btn-icon btn btn-ghost btn-sm rounded-circle"
+                            href="#"
+                            role="button"
+                            id="productDropdown16"
+                            data-bs-toggle="dropdown"
+                            data-bs-offset="-20,20"
+                            aria-expanded="false"
+                          >
+                            <i class="fe fe-more-vertical"></i>
+                          </a>
+                          <span
+                            class="dropdown-menu"
+                            aria-labelledby="productDropdown16"
+                          >
+                            <span class="dropdown-header">Settings</span>
+                            <a class="dropdown-item" href="#"
+                              ><i class="fe fe-edit dropdown-item-icon"></i
+                              >Edit</a
+                            >
+                            <a class="dropdown-item" href="#"
+                              ><i class="fe fe-mail dropdown-item-icon"></i
+                              >Invite</a
+                            >
+
+                            <a class="dropdown-item" href="#"
+                              ><i class="fe fe-trash dropdown-item-icon"></i
+                              >Delete</a
+                            >
+                          </span>
+                        </span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div
+              class="tab-pane fade"
+              id="draft"
+              role="tabpanel"
+              aria-labelledby="draft-tab"
+            >
+              <div class="table-responsive border-0">
+                <!-- Table -->
+                <table class="table mb-0 text-nowrap">
+                  <!-- Table Head -->
+                  <thead class="table-light">
+                    <tr>
+                      <th class="border-0 font-size-inherit w-0">
+                        <div class="form-check">
+                          <input
+                            type="checkbox"
+                            class="form-check-input"
+                            id="checkAll"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="checkAll"
+                          ></label>
+                        </div>
+                      </th>
+                      <th class="border-0">Products</th>
+                      <th class="border-0">Status</th>
+                      <th class="border-0">Inventory</th>
+                      <th class="border-0">Category</th>
+                      <th class="border-0">Price</th>
+
+                      <th class="border-0"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="align-middle border-top-0">
+                        <div class="form-check">
+                          <input
+                            type="checkbox"
+                            class="form-check-input"
+                            id="productSeventeen"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="productSeventeen"
+                          ></label>
+                        </div>
+                      </td>
+                      <td class="align-middle border-top-0">
+                        <a href="#" class="text-inherit">
+                          <div class="d-lg-flex align-items-center">
+                            <div>
+                              <img
+                                src="../../../assets/images/ecommerce/ecommerce-img-4.jpg"
+                                alt=""
+                                class="img-4by3-md rounded"
+                              />
+                            </div>
+                            <div class="ms-lg-3 mt-2 mt-lg-0">
+                              <h5 class="mb-0 text-primary-hover">
+                                Wayfarer Styled Sunglasses
+                              </h5>
+                            </div>
+                          </div>
+                        </a>
+                      </td>
+                      <td class="align-middle border-top-0 text-warning">
+                        <span class="badge bg-warning badge-dot me-1"></span
+                        >Draft
+                      </td>
+                      <td class="align-middle border-top-0">6</td>
+                      <td class="align-middle border-top-0">Glasses</td>
+                      <td class="align-middle border-top-0">$39.00</td>
+
+                      <td class="text-muted align-middle border-top-0 text-end">
+                        <span class="dropdown dropstart">
+                          <a
+                            class="btn-icon btn btn-ghost btn-sm rounded-circle"
+                            href="#"
+                            role="button"
+                            id="productDropdown17"
+                            data-bs-toggle="dropdown"
+                            data-bs-offset="-20,20"
+                            aria-expanded="false"
+                          >
+                            <i class="fe fe-more-vertical"></i>
+                          </a>
+                          <span
+                            class="dropdown-menu"
+                            aria-labelledby="productDropdown17"
+                          >
+                            <span class="dropdown-header">Settings</span>
+                            <a class="dropdown-item" href="#"
+                              ><i class="fe fe-edit dropdown-item-icon"></i
+                              >Edit</a
+                            >
+                            <a class="dropdown-item" href="#"
+                              ><i class="fe fe-mail dropdown-item-icon"></i
+                              >Invite</a
+                            >
+
+                            <a class="dropdown-item" href="#"
+                              ><i class="fe fe-trash dropdown-item-icon"></i
+                              >Delete</a
+                            >
+                          </span>
+                        </span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="archived"
+              role="tabpanel"
+              aria-labelledby="archived-tab"
+            >
+              <div class="table-responsive border-0">
+                <!-- Table -->
+                <table class="table mb-0 text-nowrap">
+                  <!-- Table Head -->
+                  <thead class="table-light">
+                    <tr>
+                      <th class="border-0 font-size-inherit w-0">
+                        <div class="form-check">
+                          <input
+                            type="checkbox"
+                            class="form-check-input"
+                            id="checkAll"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="checkAll"
+                          ></label>
+                        </div>
+                      </th>
+                      <th class="border-0">Products</th>
+                      <th class="border-0">Status</th>
+                      <th class="border-0">Inventory</th>
+                      <th class="border-0">Category</th>
+                      <th class="border-0">Price</th>
+
+                      <th class="border-0"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="align-middle border-top-0">
+                        <div class="form-check">
+                          <input
+                            type="checkbox"
+                            class="form-check-input"
+                            id="productEighteen"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="productEighteen"
+                          ></label>
+                        </div>
+                      </td>
+                      <td class="align-middle border-top-0">
+                        <a href="#" class="text-inherit">
+                          <div class="d-lg-flex align-items-center">
+                            <div>
+                              <img
+                                src="../../../assets/images/ecommerce/ecommerce-img-8.jpg"
+                                alt=""
+                                class="img-4by3-md rounded"
+                              />
+                            </div>
+                            <div class="ms-lg-3 mt-2 mt-lg-0">
+                              <h5 class="mb-0 text-primary-hover">
+                                Green &amp; Black Nike Athletic Shoe
+                              </h5>
+                            </div>
+                          </div>
+                        </a>
+                      </td>
+                      <td class="align-middle border-top-0 text-info">
+                        <span class="badge bg-info badge-dot me-1"></span
+                        >Archived
+                      </td>
+                      <td class="align-middle border-top-0">2</td>
+                      <td class="align-middle border-top-0">Shoe</td>
+                      <td class="align-middle border-top-0">$239.00</td>
+
+                      <td class="text-muted align-middle border-top-0 text-end">
+                        <span class="dropdown dropstart">
+                          <a
+                            class="btn-icon btn btn-ghost btn-sm rounded-circle"
+                            href="#"
+                            role="button"
+                            id="productDropdown18"
+                            data-bs-toggle="dropdown"
+                            data-bs-offset="-20,20"
+                            aria-expanded="false"
+                          >
+                            <i class="fe fe-more-vertical"></i>
+                          </a>
+                          <span
+                            class="dropdown-menu"
+                            aria-labelledby="productDropdown18"
+                          >
+                            <span class="dropdown-header">Settings</span>
+                            <a class="dropdown-item" href="#"
+                              ><i class="fe fe-edit dropdown-item-icon"></i
+                              >Edit</a
+                            >
+                            <a class="dropdown-item" href="#"
+                              ><i class="fe fe-mail dropdown-item-icon"></i
+                              >Invite</a
+                            >
+
+                            <a class="dropdown-item" href="#"
+                              ><i class="fe fe-trash dropdown-item-icon"></i
+                              >Delete</a
+                            >
+                          </span>
+                        </span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card Footer -->
+        <div
+          class="card-footer border-top-0 d-md-flex justify-content-between align-items-center"
+        >
+          <div>
+            <span>Showing products 1 to 9 of 12</span>
+          </div>
+          <nav aria-label="Page navigation example">
+            <ul class="pagination mb-0">
+              <li class="page-item disabled">
+                <a class="page-link mx-1 rounded" href="#"
+                  ><i class="mdi mdi-chevron-left"></i
+                ></a>
+              </li>
+              <li class="page-item active">
+                <a class="page-link mx-1 rounded" href="#">1</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link mx-1 rounded" href="#">2</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link mx-1 rounded" href="#">3</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link mx-1 rounded" href="#"
+                  ><i class="mdi mdi-chevron-right"></i
+                ></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
